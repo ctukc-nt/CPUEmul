@@ -13,11 +13,11 @@ namespace CPUEmul.CPU.Realisation
         /// </summary>
         /// <param name="instInStr">Строка со списком инструкций</param>
         /// <returns>Список инструкций</returns>
-        /// <exception cref="EmptyInstructionString"></exception>
+        /// <exception cref="EmptyInstructionStringException"></exception>
         public List<IInstruction> GetInstructions(string instInStr)
         {
             if (string.IsNullOrWhiteSpace(instInStr))
-                throw new EmptyInstructionString();
+                throw new EmptyInstructionStringException();
 
             var splitted = instInStr.Replace("\r\n", "\n").Split('\n');
 
