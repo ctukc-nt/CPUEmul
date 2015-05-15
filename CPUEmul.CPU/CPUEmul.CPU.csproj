@@ -41,8 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Exception\CPU\EmptyInstructionsListException.cs" />
     <Compile Include="Exception\CPU\FlagNotSupportedException.cs" />
+    <Compile Include="Exception\CPU\IncorrectOperationCodeException.cs" />
     <Compile Include="Exception\CPU\InstructionNotSupportedException.cs" />
+    <Compile Include="Exception\CPU\OperandException.cs" />
     <Compile Include="Exception\Loader\EmptyInstructionStringException.cs" />
     <Compile Include="Interfaces\ILoadInstructions.cs" />
     <Compile Include="Realisation\LoadInstructions.cs" />

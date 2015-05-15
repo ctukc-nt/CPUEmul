@@ -58,8 +58,7 @@ namespace CPUEmul.CPU.Realisation
         /// </summary>
         public readonly String[] SystemRegistersNames =
         {
-            "ACC", "DR", "RDR", "RAR", "MDR", "MAR", "IR", "OR", "SP", "PC", "COP",
-            "TA", "ADR", "F"
+            "ACC", "DR", "RDR", "RAR", "MDR", "MAR", "IR", "OR", "SP", "PC", "CA", "F"
         };
 
         public void Init()
@@ -361,8 +360,7 @@ namespace CPUEmul.CPU.Realisation
             }
 
             this.SetSystemRegister("PC", offset);
-            this.SetSystemRegister("CIA", offset);
-            this.SetSystemRegister("CI", this.ProgramMemory[offset]);
+            this.SetSystemRegister("CR", this.ProgramMemory[offset]);
 
             return false;
         }
