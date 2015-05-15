@@ -41,6 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Exception\Loader\EmptyInstructionString.cs" />
+    <Compile Include="Interfaces\ILoadInstructions.cs" />
+    <Compile Include="Realisation\LoadInstructions.cs" />
+    <Compile Include="Realisation\CPU.cs" />
+    <Compile Include="Interfaces\ICPU.cs" />
+    <Compile Include="Interfaces\IInstruction.cs" />
+    <Compile Include="Realisation\Instruction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
