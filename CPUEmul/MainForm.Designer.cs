@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.dgvMemory = new System.Windows.Forms.DataGridView();
+            this.scDevice = new System.Windows.Forms.SplitContainer();
+            this.scProgram = new System.Windows.Forms.SplitContainer();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.dgvCompiledProgram = new System.Windows.Forms.DataGridView();
+            this.scCPU = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -86,21 +85,22 @@
             this.label21 = new System.Windows.Forms.Label();
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
-            this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.Panel2.SuspendLayout();
-            this.splitContainer3.SuspendLayout();
+            this.rtbTextProgram = new System.Windows.Forms.RichTextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMemory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scDevice)).BeginInit();
+            this.scDevice.Panel1.SuspendLayout();
+            this.scDevice.Panel2.SuspendLayout();
+            this.scDevice.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scProgram)).BeginInit();
+            this.scProgram.Panel1.SuspendLayout();
+            this.scProgram.Panel2.SuspendLayout();
+            this.scProgram.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCompiledProgram)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scCPU)).BeginInit();
+            this.scCPU.Panel1.SuspendLayout();
+            this.scCPU.Panel2.SuspendLayout();
+            this.scCPU.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -111,85 +111,72 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvMemory
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvMemory.AllowUserToAddRows = false;
+            this.dgvMemory.AllowUserToDeleteRows = false;
+            this.dgvMemory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(526, 229);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvMemory.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvMemory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMemory.Location = new System.Drawing.Point(3, 19);
+            this.dgvMemory.Name = "dgvMemory";
+            this.dgvMemory.Size = new System.Drawing.Size(532, 239);
+            this.dgvMemory.TabIndex = 0;
             // 
-            // dataGridView2
+            // scDevice
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 29);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(227, 478);
-            this.dataGridView2.TabIndex = 1;
+            this.scDevice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scDevice.Location = new System.Drawing.Point(0, 0);
+            this.scDevice.Name = "scDevice";
             // 
-            // splitContainer1
+            // scDevice.Panel1
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
+            this.scDevice.Panel1.Controls.Add(this.scProgram);
             // 
-            // splitContainer1.Panel1
+            // scDevice.Panel2
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.splitContainer2);
+            this.scDevice.Panel2.Controls.Add(this.scCPU);
+            this.scDevice.Size = new System.Drawing.Size(1008, 510);
+            this.scDevice.SplitterDistance = 466;
+            this.scDevice.TabIndex = 2;
             // 
-            // splitContainer1.Panel2
+            // scProgram
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer1.Size = new System.Drawing.Size(1006, 510);
-            this.splitContainer1.SplitterDistance = 470;
-            this.splitContainer1.TabIndex = 2;
+            this.scProgram.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scProgram.Location = new System.Drawing.Point(0, 0);
+            this.scProgram.Name = "scProgram";
             // 
-            // splitContainer2
+            // scProgram.Panel1
             // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Name = "splitContainer2";
+            this.scProgram.Panel1.Controls.Add(this.button4);
+            this.scProgram.Panel1.Controls.Add(this.rtbTextProgram);
+            this.scProgram.Panel1.Controls.Add(this.button3);
+            this.scProgram.Panel1.Controls.Add(this.button2);
+            this.scProgram.Panel1.Controls.Add(this.button1);
+            this.scProgram.Panel1.Controls.Add(this.label1);
             // 
-            // splitContainer2.Panel1
+            // scProgram.Panel2
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.button3);
-            this.splitContainer2.Panel1.Controls.Add(this.button2);
-            this.splitContainer2.Panel1.Controls.Add(this.button1);
-            this.splitContainer2.Panel1.Controls.Add(this.label1);
-            this.splitContainer2.Panel1.Controls.Add(this.dataGridView2);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.label2);
-            this.splitContainer2.Panel2.Controls.Add(this.dataGridView3);
-            this.splitContainer2.Size = new System.Drawing.Size(470, 510);
-            this.splitContainer2.SplitterDistance = 233;
-            this.splitContainer2.TabIndex = 3;
+            this.scProgram.Panel2.Controls.Add(this.label2);
+            this.scProgram.Panel2.Controls.Add(this.dgvCompiledProgram);
+            this.scProgram.Size = new System.Drawing.Size(466, 510);
+            this.scProgram.SplitterDistance = 231;
+            this.scProgram.TabIndex = 3;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(187, 4);
+            this.button3.Location = new System.Drawing.Point(70, 24);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(23, 21);
             this.button3.TabIndex = 5;
-            this.button3.Text = "C";
+            this.button3.Text = "X";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(158, 4);
+            this.button2.Location = new System.Drawing.Point(41, 24);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(23, 21);
             this.button2.TabIndex = 4;
@@ -198,7 +185,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(129, 4);
+            this.button1.Location = new System.Drawing.Point(12, 24);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(23, 21);
             this.button1.TabIndex = 3;
@@ -225,38 +212,39 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Компилированная программа:";
             // 
-            // dataGridView3
+            // dgvCompiledProgram
             // 
-            this.dataGridView3.AllowUserToAddRows = false;
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvCompiledProgram.AllowUserToAddRows = false;
+            this.dgvCompiledProgram.AllowUserToDeleteRows = false;
+            this.dgvCompiledProgram.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(5, 49);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(225, 458);
-            this.dataGridView3.TabIndex = 2;
+            this.dgvCompiledProgram.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvCompiledProgram.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCompiledProgram.Location = new System.Drawing.Point(5, 49);
+            this.dgvCompiledProgram.Name = "dgvCompiledProgram";
+            this.dgvCompiledProgram.Size = new System.Drawing.Size(223, 458);
+            this.dgvCompiledProgram.TabIndex = 2;
             // 
-            // splitContainer3
+            // scCPU
             // 
-            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer3.Name = "splitContainer3";
-            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.scCPU.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scCPU.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.scCPU.Location = new System.Drawing.Point(0, 0);
+            this.scCPU.Name = "scCPU";
+            this.scCPU.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // splitContainer3.Panel1
+            // scCPU.Panel1
             // 
-            this.splitContainer3.Panel1.Controls.Add(this.groupBox1);
+            this.scCPU.Panel1.Controls.Add(this.groupBox1);
             // 
-            // splitContainer3.Panel2
+            // scCPU.Panel2
             // 
-            this.splitContainer3.Panel2.Controls.Add(this.label3);
-            this.splitContainer3.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer3.Size = new System.Drawing.Size(532, 510);
-            this.splitContainer3.SplitterDistance = 255;
-            this.splitContainer3.TabIndex = 1;
+            this.scCPU.Panel2.Controls.Add(this.label3);
+            this.scCPU.Panel2.Controls.Add(this.dgvMemory);
+            this.scCPU.Size = new System.Drawing.Size(538, 510);
+            this.scCPU.SplitterDistance = 245;
+            this.scCPU.TabIndex = 1;
             // 
             // groupBox1
             // 
@@ -279,10 +267,10 @@
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(532, 255);
+            this.groupBox1.Size = new System.Drawing.Size(538, 245);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Состояние процессора";
@@ -322,7 +310,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(86, 137);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 13);
+            this.label5.Size = new System.Drawing.Size(21, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "PC";
             // 
@@ -331,7 +319,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(7, 137);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 13);
+            this.label4.Size = new System.Drawing.Size(21, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "SP";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -421,7 +409,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(243, 166);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(24, 13);
+            this.label6.Size = new System.Drawing.Size(22, 13);
             this.label6.TabIndex = 8;
             this.label6.Text = "RB";
             // 
@@ -430,7 +418,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(243, 140);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(24, 13);
+            this.label7.Size = new System.Drawing.Size(22, 13);
             this.label7.TabIndex = 7;
             this.label7.Text = "RA";
             // 
@@ -471,7 +459,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(6, 23);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 13);
+            this.label8.Size = new System.Drawing.Size(26, 13);
             this.label8.TabIndex = 7;
             this.label8.Text = "Acc";
             // 
@@ -480,7 +468,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(6, 48);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(25, 13);
+            this.label9.Size = new System.Drawing.Size(23, 13);
             this.label9.TabIndex = 9;
             this.label9.Text = "DR";
             // 
@@ -496,7 +484,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(6, 23);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 13);
+            this.label10.Size = new System.Drawing.Size(30, 13);
             this.label10.TabIndex = 9;
             this.label10.Text = "PDR";
             // 
@@ -512,7 +500,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(6, 48);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(33, 13);
+            this.label11.Size = new System.Drawing.Size(30, 13);
             this.label11.TabIndex = 11;
             this.label11.Text = "RAR";
             // 
@@ -528,7 +516,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(6, 23);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(35, 13);
+            this.label12.Size = new System.Drawing.Size(32, 13);
             this.label12.TabIndex = 9;
             this.label12.Text = "MDR";
             // 
@@ -544,7 +532,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(6, 48);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(34, 13);
+            this.label13.Size = new System.Drawing.Size(31, 13);
             this.label13.TabIndex = 11;
             this.label13.Text = "MAR";
             // 
@@ -560,7 +548,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(340, 53);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(20, 13);
+            this.label14.Size = new System.Drawing.Size(18, 13);
             this.label14.TabIndex = 12;
             this.label14.Text = "IR";
             // 
@@ -576,7 +564,7 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(433, 53);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(25, 13);
+            this.label15.Size = new System.Drawing.Size(23, 13);
             this.label15.TabIndex = 14;
             this.label15.Text = "OR";
             // 
@@ -606,7 +594,7 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(85, 30);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(23, 13);
+            this.label16.Size = new System.Drawing.Size(21, 13);
             this.label16.TabIndex = 8;
             this.label16.Text = "TA";
             // 
@@ -615,13 +603,13 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(6, 30);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(32, 13);
+            this.label17.Size = new System.Drawing.Size(29, 13);
             this.label17.TabIndex = 7;
             this.label17.Text = "COP";
             // 
             // textBox15
             // 
-            this.textBox15.Location = new System.Drawing.Point(169, 26);
+            this.textBox15.Location = new System.Drawing.Point(172, 26);
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(39, 20);
             this.textBox15.TabIndex = 12;
@@ -631,7 +619,7 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(139, 30);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(33, 13);
+            this.label18.Size = new System.Drawing.Size(30, 13);
             this.label18.TabIndex = 11;
             this.label18.Text = "ADR";
             // 
@@ -647,7 +635,7 @@
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(11, 23);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(11, 13);
+            this.label19.Size = new System.Drawing.Size(10, 13);
             this.label19.TabIndex = 11;
             this.label19.Text = "I";
             // 
@@ -663,7 +651,7 @@
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(48, 23);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(24, 13);
+            this.label20.Size = new System.Drawing.Size(22, 13);
             this.label20.TabIndex = 13;
             this.label20.Text = "OV";
             // 
@@ -679,7 +667,7 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(139, 22);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(15, 13);
+            this.label21.Size = new System.Drawing.Size(14, 13);
             this.label21.TabIndex = 15;
             this.label21.Text = "Z";
             // 
@@ -695,36 +683,55 @@
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(98, 23);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(15, 13);
+            this.label22.Size = new System.Drawing.Size(14, 13);
             this.label22.TabIndex = 17;
             this.label22.Text = "S";
+            // 
+            // rtbTextProgram
+            // 
+            this.rtbTextProgram.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rtbTextProgram.Location = new System.Drawing.Point(3, 49);
+            this.rtbTextProgram.Name = "rtbTextProgram";
+            this.rtbTextProgram.Size = new System.Drawing.Size(225, 458);
+            this.rtbTextProgram.TabIndex = 6;
+            this.rtbTextProgram.Text = "";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(99, 24);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(23, 21);
+            this.button4.TabIndex = 7;
+            this.button4.Text = "C";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1006, 510);
-            this.Controls.Add(this.splitContainer1);
+            this.ClientSize = new System.Drawing.Size(1008, 510);
+            this.Controls.Add(this.scDevice);
             this.Name = "MainForm";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel1.PerformLayout();
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            this.splitContainer2.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.splitContainer3.Panel1.ResumeLayout(false);
-            this.splitContainer3.Panel2.ResumeLayout(false);
-            this.splitContainer3.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
-            this.splitContainer3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMemory)).EndInit();
+            this.scDevice.Panel1.ResumeLayout(false);
+            this.scDevice.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.scDevice)).EndInit();
+            this.scDevice.ResumeLayout(false);
+            this.scProgram.Panel1.ResumeLayout(false);
+            this.scProgram.Panel1.PerformLayout();
+            this.scProgram.Panel2.ResumeLayout(false);
+            this.scProgram.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scProgram)).EndInit();
+            this.scProgram.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCompiledProgram)).EndInit();
+            this.scCPU.Panel1.ResumeLayout(false);
+            this.scCPU.Panel2.ResumeLayout(false);
+            this.scCPU.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.scCPU)).EndInit();
+            this.scCPU.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -745,17 +752,16 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.DataGridView dgvMemory;
+        private System.Windows.Forms.SplitContainer scDevice;
+        private System.Windows.Forms.SplitContainer scProgram;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.SplitContainer splitContainer3;
+        private System.Windows.Forms.DataGridView dgvCompiledProgram;
+        private System.Windows.Forms.SplitContainer scCPU;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.TextBox textBox2;
@@ -803,6 +809,8 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.RichTextBox rtbTextProgram;
     }
 }
 
