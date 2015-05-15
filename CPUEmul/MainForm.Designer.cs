@@ -31,9 +31,9 @@
             this.dgvMemory = new System.Windows.Forms.DataGridView();
             this.scDevice = new System.Windows.Forms.SplitContainer();
             this.scProgram = new System.Windows.Forms.SplitContainer();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bClearTextProg = new System.Windows.Forms.Button();
+            this.bSaveToFile = new System.Windows.Forms.Button();
+            this.bLoadFromFile = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvCompiledProgram = new System.Windows.Forms.DataGridView();
@@ -86,7 +86,7 @@
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.rtbTextProgram = new System.Windows.Forms.RichTextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.bCompile = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMemory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scDevice)).BeginInit();
             this.scDevice.Panel1.SuspendLayout();
@@ -150,11 +150,11 @@
             // 
             // scProgram.Panel1
             // 
-            this.scProgram.Panel1.Controls.Add(this.button4);
+            this.scProgram.Panel1.Controls.Add(this.bCompile);
             this.scProgram.Panel1.Controls.Add(this.rtbTextProgram);
-            this.scProgram.Panel1.Controls.Add(this.button3);
-            this.scProgram.Panel1.Controls.Add(this.button2);
-            this.scProgram.Panel1.Controls.Add(this.button1);
+            this.scProgram.Panel1.Controls.Add(this.bClearTextProg);
+            this.scProgram.Panel1.Controls.Add(this.bSaveToFile);
+            this.scProgram.Panel1.Controls.Add(this.bLoadFromFile);
             this.scProgram.Panel1.Controls.Add(this.label1);
             // 
             // scProgram.Panel2
@@ -165,32 +165,35 @@
             this.scProgram.SplitterDistance = 231;
             this.scProgram.TabIndex = 3;
             // 
-            // button3
+            // bClearTextProg
             // 
-            this.button3.Location = new System.Drawing.Point(70, 24);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(23, 21);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "X";
-            this.button3.UseVisualStyleBackColor = true;
+            this.bClearTextProg.Location = new System.Drawing.Point(70, 24);
+            this.bClearTextProg.Name = "bClearTextProg";
+            this.bClearTextProg.Size = new System.Drawing.Size(23, 21);
+            this.bClearTextProg.TabIndex = 5;
+            this.bClearTextProg.Text = "X";
+            this.bClearTextProg.UseVisualStyleBackColor = true;
+            this.bClearTextProg.Click += new System.EventHandler(this.bClearTextProg_Click);
             // 
-            // button2
+            // bSaveToFile
             // 
-            this.button2.Location = new System.Drawing.Point(41, 24);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(23, 21);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "S";
-            this.button2.UseVisualStyleBackColor = true;
+            this.bSaveToFile.Location = new System.Drawing.Point(41, 24);
+            this.bSaveToFile.Name = "bSaveToFile";
+            this.bSaveToFile.Size = new System.Drawing.Size(23, 21);
+            this.bSaveToFile.TabIndex = 4;
+            this.bSaveToFile.Text = "S";
+            this.bSaveToFile.UseVisualStyleBackColor = true;
+            this.bSaveToFile.Click += new System.EventHandler(this.bSaveToFile_Click);
             // 
-            // button1
+            // bLoadFromFile
             // 
-            this.button1.Location = new System.Drawing.Point(12, 24);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(23, 21);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "L";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bLoadFromFile.Location = new System.Drawing.Point(12, 24);
+            this.bLoadFromFile.Name = "bLoadFromFile";
+            this.bLoadFromFile.Size = new System.Drawing.Size(23, 21);
+            this.bLoadFromFile.TabIndex = 3;
+            this.bLoadFromFile.Text = "L";
+            this.bLoadFromFile.UseVisualStyleBackColor = true;
+            this.bLoadFromFile.Click += new System.EventHandler(this.bLoadFromFile_Click);
             // 
             // label1
             // 
@@ -698,14 +701,14 @@
             this.rtbTextProgram.TabIndex = 6;
             this.rtbTextProgram.Text = "";
             // 
-            // button4
+            // bCompile
             // 
-            this.button4.Location = new System.Drawing.Point(99, 24);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(23, 21);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "C";
-            this.button4.UseVisualStyleBackColor = true;
+            this.bCompile.Location = new System.Drawing.Point(100, 24);
+            this.bCompile.Name = "bCompile";
+            this.bCompile.Size = new System.Drawing.Size(23, 21);
+            this.bCompile.TabIndex = 7;
+            this.bCompile.Text = "C";
+            this.bCompile.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -755,9 +758,9 @@
         private System.Windows.Forms.DataGridView dgvMemory;
         private System.Windows.Forms.SplitContainer scDevice;
         private System.Windows.Forms.SplitContainer scProgram;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bClearTextProg;
+        private System.Windows.Forms.Button bSaveToFile;
+        private System.Windows.Forms.Button bLoadFromFile;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvCompiledProgram;
@@ -809,7 +812,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button bCompile;
         private System.Windows.Forms.RichTextBox rtbTextProgram;
     }
 }

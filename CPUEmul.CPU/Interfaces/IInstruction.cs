@@ -13,6 +13,11 @@ namespace CPUEmul.CPU.Interfaces
         string Name { get; set; }
 
         /// <summary>
+        /// Метка операции
+        /// </summary>
+        string Label { get; set; }
+
+        /// <summary>
         /// Список операндов
         /// </summary>
         List<string> OperandsList { get; set; } 

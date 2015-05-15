@@ -30,6 +30,9 @@ namespace CPUEmul.CPU.Realisation
                     continue;
 
                 cur = Regex.Replace(cur, @"\s+", " ");
+
+                var isContainLabel = Regex.IsMatch(cur, @"^[A-z]\S+:"); // регулярка на проверку содержания в инструкции метки
+
                 
                 String[] wordsInString = cur.Split(new[] { ' ', '\t', ',' });
                 

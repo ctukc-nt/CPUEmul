@@ -1,7 +1,17 @@
-﻿namespace CPUEmul.CPU.Interfaces
+﻿using System;
+
+namespace CPUEmul.CPU.Interfaces
 {
-    interface ICPU
+    public interface ICPU
     {
+        /// <summary>
+        /// Список поддерживаемых команд
+        /// </summary>
+        String[] Commands { get; }
+
+        /// <summary>
+        /// Загрузить инструкции
+        /// </summary>
         void LoadInstructions();
     }
 }

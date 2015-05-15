@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using CPUEmul.CPU.Exception.CPU;
 using CPUEmul.CPU.Interfaces;
 
@@ -8,8 +9,14 @@ namespace CPUEmul.CPU.Realisation
     /// <summary>
     ///     Класс, отвечающий за эмуляцию ЦП
     /// </summary>
-    public class CPU
+    public class CPU:ICPU
     {
+
+        private readonly String[] _commands =
+        {
+            null, "NOP", "INT", "ADD", "SUB", "DIV", "MUL", "MOV", "RET", "JZ", "JNZ"
+        };
+
         /// <summary>
         ///     Банк данных (память данных)
         /// </summary>
@@ -43,11 +50,8 @@ namespace CPUEmul.CPU.Realisation
         /// <summary>
         ///     Список поддерживаемых команд
         /// </summary>
-        public readonly String[] Commands =
-        {
-            null, "NOP", "INT", "ADD", "SUB", "DIV", "MUL", "MOV", "RET", "JZ", "JNZ"
-        };
-
+        public String[] Commands { get { return _commands; } }
+        
         /// <summary>
         ///     Флаги процессора
         /// </summary>
@@ -241,7 +245,7 @@ namespace CPUEmul.CPU.Realisation
                 var code = GetOperationCodeByName(instruction.Name);
                 if (code == -1)
                 {
-                    AppendToLog("Невозможно выполнение команды. Такая команда отсутсвуют в списке выполнимых.", instruction);
+                    AppendToLog("Невозможно выполнение команды. Такая команда отсутсвует в списке выполнимых.", instruction);
                     loadSuccess = false;
                 }
                 else
@@ -383,6 +387,12 @@ namespace CPUEmul.CPU.Realisation
         private void AppendToLog(System.Exception exception)
         {
 
+        }
+
+
+        public void LoadInstructions()
+        {
+            throw new NotImplementedException();
         }
     }
 }
